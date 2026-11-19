@@ -6,7 +6,7 @@ import PixelIcon from "./PixelIcon";
 
 type Props = Project & { index: number };
 
-export default function ProjectCard({ title, description, tech, youtubeId, status, accent, index }: Props) {
+export default function ProjectCard({ title, description, tech, youtubeId, earlierBuildId, status, accent, index }: Props) {
   const { language } = useLanguage();
   const t = useTranslation();
   const [playing, setPlaying] = useState(false);
@@ -70,6 +70,18 @@ export default function ProjectCard({ title, description, tech, youtubeId, statu
           {name}
         </h3>
         <p className="mt-3 flex-1 leading-relaxed text-ink/75">{description[language]}</p>
+
+        {earlierBuildId && (
+          <a
+            href={`https://www.youtube.com/watch?v=${earlierBuildId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex w-fit items-center gap-2 font-pixel text-[0.5rem] uppercase text-ink/60 transition-colors hover:text-gold"
+          >
+            <PixelIcon name="play" size={8} />
+            {t.projects.earlier}
+          </a>
+        )}
 
         <p className="mt-6 mb-3 font-pixel text-[0.5rem] uppercase text-ink/50">{t.projects.items}</p>
         <ul className="flex flex-wrap gap-3">

@@ -7,8 +7,10 @@ export type Project = {
   description: LocalizedText;
   status: "wip" | "demo";
   tech: string[];
-  /** YouTube video id */
+  /** YouTube video id of the main trailer */
   youtubeId: string;
+  /** Optional YouTube id of an older build, shown as a secondary link */
+  earlierBuildId?: string;
   /** Accent colour for the card */
   accent: string;
 };
@@ -25,7 +27,8 @@ export const projects: Project[] = [
     },
     status: "wip",
     tech: ["Unity", "C#", "ScriptableObjects", "SQLite", "2D"],
-    youtubeId: "Pd9jGSP8eIQ",
+    youtubeId: "_T04l-zLWTs",
+    earlierBuildId: "Pd9jGSP8eIQ",
     accent: "#f472b6",
   },
   {
