@@ -1,4 +1,4 @@
-import avatar from "../assets/avatar.jpg";
+import avatar from "../assets/avatar.webp";
 import { achievements, skills } from "../data/stats";
 import { useLanguage } from "../i18n/LanguageContext";
 import { useTranslation } from "../i18n/useTranslation";
