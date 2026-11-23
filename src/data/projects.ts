@@ -27,7 +27,7 @@ export const projects: Project[] = [
     },
     status: "wip",
     tech: ["Unity", "C#", "ScriptableObjects", "SQLite", "2D"],
-    youtubeId: "_T04l-zLWTs",
+    youtubeId: "RgeFQCJBxF0",
     earlierBuildId: "Pd9jGSP8eIQ",
     accent: "#f472b6",
   },
